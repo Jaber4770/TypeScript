@@ -23,4 +23,27 @@ console.log(array);
 let multitype = [];
 multitype.push(4, 'lsdfj');
 console.log(multitype);
+let value;
+value = 4;
+value = 'dlf';
+// object
+let obbject;
+obbject = {
+    name: 'jack',
+    age: 11
+};
+let obbjject;
+obbjject = {
+    name: 'jack',
+    age: 5,
+    programmer: false,
+};
+console.log(obbjject);
+let abc;
+abc = 5;
+// function
+const myFuncc = (a, b, c) => {
+    console.log("hello", a, b);
+};
+myFuncc('A', "B");
 //# sourceMappingURL=script.js.map
