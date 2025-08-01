@@ -69,9 +69,29 @@ abc = 5;
 
 // function
 
-const myFuncc = (a: string, b: string, c?: string) => {
-    console.log("hello", a, b);
+const myFuncc = (a: string, b: string, c: string = "C") => {
+    console.log("hello", a, b, c);
 }
-
 myFuncc('A', "B");
 
+const returnFunc = (a: number, b: number): number => {
+    return a * b;
+}
+console.log(returnFunc(5, 5));
+
+// type aliases
+
+type stringOrNum = string | number;
+type userDetails = { name: string, age: number };
+
+const userDetails = (id: stringOrNum, user: userDetails) => {
+    console.log(`user id is:${id}, name is:${user.name} and age is ${user.age}`);
+}
+
+userDetails(5, { name: 'jack', age: 24 })
+
+const sayHello = (user: userDetails) => {
+    console.log(`hello ${user.age > 50 ? "sir" : "Mr."} ${user.name}`);
+}
+
+sayHello({ name: "jack", age: 24 });

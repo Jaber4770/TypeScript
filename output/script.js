@@ -42,8 +42,20 @@ console.log(obbjject);
 let abc;
 abc = 5;
 // function
-const myFuncc = (a, b, c) => {
-    console.log("hello", a, b);
+const myFuncc = (a, b, c = "C") => {
+    console.log("hello", a, b, c);
 };
 myFuncc('A', "B");
+const returnFunc = (a, b) => {
+    return a * b;
+};
+console.log(returnFunc(5, 5));
+const userDetails = (id, user) => {
+    console.log(`user id is:${id}, name is:${user.name} and age is ${user.age}`);
+};
+userDetails(5, { name: 'jack', age: 24 });
+const sayHello = (user) => {
+    console.log(`hello ${user.age > 50 ? "sir" : "Mr."} ${user.name}`);
+};
+sayHello({ name: "jack", age: 24 });
 //# sourceMappingURL=script.js.map
