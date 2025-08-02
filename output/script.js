@@ -79,4 +79,24 @@ const user = addID({
 });
 console.log(user.name);
 console.log(user.country);
+// Enums
+var responsType;
+(function (responsType) {
+    responsType[responsType["success"] = 0] = "success";
+    responsType[responsType["failure"] = 1] = "failure";
+    responsType[responsType["unauthenticated"] = 2] = "unauthenticated";
+    responsType[responsType["forbidden"] = 3] = "forbidden";
+})(responsType || (responsType = {}));
+;
+const rresponse1 = {
+    status: 200,
+    type: responsType.success,
+    data: 'this is test data....'
+};
+console.log(rresponse1);
+// TS Tupes
+// tuples is a concept and  to keep the data type serial constant.
+let a = [21, 34, 'ldjfsl', { ts: "js" }];
+let b = [4, 'dlfsl', { ts: 'ts mane typescript' }];
+// b[2] = 5;
 //# sourceMappingURL=script.js.map

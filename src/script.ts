@@ -134,3 +134,30 @@ const user = addID({
 
 console.log(user.name);
 console.log(user.country);
+
+
+
+// Enums
+enum responsType { success, failure, unauthenticated, forbidden };
+
+interface APIresponse<T>{
+    status: number,
+    type: responsType,
+    data: T
+}
+
+const rresponse1: APIresponse<string> = {
+    status: 200,
+    type: responsType.success,
+    data: 'this is test data....'
+}
+
+console.log(rresponse1)
+
+// TS Tupes
+// tuples is a concept and  to keep the data type serial constant.
+
+let a = [21, 34, 'ldjfsl', { ts: "js" }];
+let b: [number, string, object] = [4, 'dlfsl', { ts: 'ts mane typescript' }];
+
+// b[2] = 5;
