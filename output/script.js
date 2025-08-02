@@ -58,4 +58,10 @@ const sayHello = (user) => {
     console.log(`hello ${user.age > 50 ? "sir" : "Mr."} ${user.name}`);
 };
 sayHello({ name: "jack", age: 24 });
+// function signature
+let userrDetails;
+userrDetails = (id, userInfo) => {
+    console.log(`${userInfo.name} er id holo ${userInfo.id}`);
+};
+console.log(userrDetails(575430, { name: 'jack', id: 575430 }));
 //# sourceMappingURL=script.js.map

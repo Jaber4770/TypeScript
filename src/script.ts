@@ -95,3 +95,19 @@ const sayHello = (user: userDetails) => {
 }
 
 sayHello({ name: "jack", age: 24 });
+
+
+// function signature
+let userrDetails: (id: number | string, userInfo: {
+    name: string,
+    id: number
+}) =>void ;
+
+userrDetails = (id: number | string, userInfo: {
+    name: string,
+    id: number
+}) => {
+    console.log(`${userInfo.name} er id holo ${userInfo.id}`);
+}
+
+console.log(userrDetails(575430, {name:'jack',id:575430}));
