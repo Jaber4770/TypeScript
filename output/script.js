@@ -1,4 +1,3 @@
-"use strict";
 console.log('Hello World!');
 const country = "Bangladesh";
 console.log(country);
@@ -64,4 +63,20 @@ userrDetails = (id, userInfo) => {
     console.log(`${userInfo.name} er id holo ${userInfo.id}`);
 };
 console.log(userrDetails(575430, { name: 'jack', id: 575430 }));
+// class----------------------------------------------
+import { Player } from './player.js';
+const mashrafi = new Player('Mashrafi', 40, 'Bangladesh');
+console.log(mashrafi);
+// generic
+const addID = (obj) => {
+    let id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { id });
+};
+const user = addID({
+    name: 'Mashrafi',
+    age: 40,
+    country: "Bangladesh"
+});
+console.log(user.name);
+console.log(user.country);
 //# sourceMappingURL=script.js.map
